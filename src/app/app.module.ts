@@ -10,6 +10,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SummaryComponent } from './summary/summary.component';
+import { CreateGoalsComponent } from './create-goals/create-goals.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+
+const routes: Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'summary', component: SummaryComponent },
+  { path: 'employees', component: EmployeeListComponent },
+  { path: '**', redirectTo: '' }
+  
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +29,8 @@ import { SummaryComponent } from './summary/summary.component';
     DashboardComponent,
     SummaryComponent,
     CreateGoalsComponent,
-    NavbarComponent
+    NavbarComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
