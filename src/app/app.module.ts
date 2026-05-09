@@ -7,10 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SummaryComponent } from './summary/summary.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'summary', component: SummaryComponent },
   { path: '**', redirectTo: '' }
 ];
 
@@ -18,7 +20,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
