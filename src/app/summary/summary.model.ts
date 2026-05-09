@@ -23,7 +23,7 @@ export interface ChildGoal {
 export interface ParentGoal {
   parentGoalId: number;
   teamCode: string;
-  childGoal: ChildGoal;
+  childGoals: ChildGoal[];
 }
 
 export interface GoalSheetDetails {

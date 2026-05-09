@@ -5,17 +5,42 @@
     <p>Team Code: {{ summaryData.parentGoal.teamCode }}</p>
   </div>
 
-  <section class="child-goal card">
-    <h2>{{ summaryData.parentGoal.childGoal.childGoalTitle }}</h2>
-    <p class="goal-summary">{{ summaryData.parentGoal.childGoal.summary }}</p>
-    <div class="goal-meta">
-      <div><strong>Estimate:</strong> {{ summaryData.parentGoal.childGoal.estimateDate }}</div>
-      <div><strong>Status:</strong> <span class="status-tag">{{ summaryData.parentGoal.childGoal.approvedStatus }}</span></div>
+  <section class="goal-sheet-settings card">
+    <h2>Goal Sheet Details</h2>
+    <div class="settings-grid">
+      <div><strong>Allowed creation days:</strong> {{ summaryData.goalSheetDetails.settings.goalCreationAllowedDays }}</div>
+      <div><strong>Edit at month-end:</strong> {{ summaryData.goalSheetDetails.settings.goalEditAllowedAtMonthEnd ? 'Yes' : 'No' }}</div>
+      <div><strong>Multiple child goals:</strong> {{ summaryData.goalSheetDetails.settings.multipleChildGoalsAllowed ? 'Yes' : 'No' }}</div>
+      <div><strong>Total child goals:</strong> {{ totalChildGoals }}</div>
+      <div><strong>Total comments:</strong> {{ totalComments }}</div>
     </div>
+    <div class="status-list">
+      <strong>Allowed statuses:</strong>
+      <div
+        class="status-pill"
+        *ngFor="let status of summaryData.goalSheetDetails.allowedStatuses"
+        [ngClass]="status.toLowerCase().replace('_', '-')"
+      >
+        {{ status }}
+      </div>
+    </div>
+  </section>
 
+  <section class="child-goal card" *ngFor="let goal of summaryData.parentGoal.childGoals">
+    <h2>{{ goal.childGoalTitle }}</h2>
+    <p class="goal-summary">{{ goal.summary }}</p>
+    <div class="goal-meta">
+      <div><strong>Estimate:</strong> {{ goal.estimateDate }}</div>
+      <div><strong>Status:</strong>
+        <span class="status-tag" [ngClass]="goal.approvedStatus.toLowerCase().replace('_', '-')">
+          {{ goal.approvedStatus }}
+        </span>
+      </div>
+    </div>
     <div class="goal-comments">
       <h3>Comments</h3>
-      <div *ngFor="let comment of summaryData.parentGoal.childGoal.comments" class="comment-card">
+      <div *ngIf="goal.comments.length === 0" class="no-comments">No comments yet.</div>
+      <div *ngFor="let comment of goal.comments" class="comment-card">
         <div class="comment-header">
           <span class="comment-author">{{ comment.commentedBy }}</span>
           <span class="comment-date">{{ comment.commentedDate | date: 'medium' }}</span>
