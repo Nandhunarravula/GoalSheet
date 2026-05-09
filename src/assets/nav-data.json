@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Dashboard",
+    "path": "/dashboard",
+    "icon": "fas fa-home"
+  },
+  {
+    "label": "My Goals",
+    "path": "/create-goals",
+    "icon": "fas fa-list"
+  },
+  {
+    "label": "Summary",
+    "path": "/summary",
+    "icon": "fas fa-chart-bar"
+  }
+]

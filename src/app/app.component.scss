@@ -1,1 +1,15 @@
-﻿
+﻿.app-root {
+  min-height: 100vh;
+  display: flex;
+}
+
+.app-shell {
+  flex: 1;
+  min-height: 100vh;
+  padding: 24px;
+  transition: margin-left 0.2s ease;
+}
+
+.app-shell.has-navbar {
+  margin-left: 240px;
+}

@@ -1,0 +1,46 @@
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 24px 16px;
+  overflow-y: auto;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.sidebar-menu {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.sidebar-menu .nav-item {
+  margin-bottom: 8px;
+}
+
+.sidebar-menu .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  color: rgba(248, 250, 252, 0.9);
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-menu .nav-link:hover,
+.sidebar-menu .nav-link.active-menu {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sidebar-menu .nav-link i {
+  min-width: 18px;
+}
