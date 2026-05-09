@@ -42,23 +42,17 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    this.errorMessage = '';
-
-    if (this.credentials.length === 0) {
-      this.errorMessage = 'Login system is not ready.';
-      return;
-    }
-
     const user = this.credentials.find(
-      c => c.employeeId === this.employeeId && c.password === this.password
+      (cred) =>
+        cred.employeeId === this.employeeId &&
+        cred.password === this.password
     );
 
     if (user) {
       this.authService.setUser(user);
       this.router.navigate(['/dashboard']);
-      return;
+    } else {
+      this.errorMessage = 'Invalid Employee ID or Password';
     }
-
-    this.errorMessage = 'Employee ID or password is incorrect.';
   }
 }
