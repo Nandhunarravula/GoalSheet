@@ -1,0 +1,247 @@
+<div class="d-flex vh-100 bg-light">
+
+  <!-- Sidebar -->
+  <div class="sidebar text-white p-3">
+
+    <div class="d-flex align-items-center mb-4">
+      <div class="me-2 fs-4">🎯</div>
+      <h4 class="mb-0">Goal Sheet</h4>
+    </div>
+
+    <ul class="nav flex-column sidebar-menu">
+
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-home me-2"></i> Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-user me-2"></i> My Goals
+        </a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-users me-2"></i> Team Goals
+        </a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a class="nav-link active-menu text-white" href="#">
+          <i class="fas fa-list me-2"></i> All Goals
+        </a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-comments me-2"></i> Comments
+        </a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-bell me-2"></i> Notifications
+        </a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-chart-bar me-2"></i> Reports
+        </a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-user-circle me-2"></i> Profile
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <i class="fas fa-sign-out-alt me-2"></i> Logout
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-grow-1 p-4">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="fw-bold">My Goals</h3>
+
+      <button class="btn btn-primary px-4">
+        + Create Goal
+      </button>
+    </div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mb-4">
+
+      <li class="nav-item">
+        <a class="nav-link active" href="#">All</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Draft</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Submitted</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">TL Reviewed</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Approved</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Rejected</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Locked</a>
+      </li>
+
+    </ul>
+
+    <!-- Table -->
+    <div class="card shadow-sm border-0">
+
+      <div class="card-body">
+
+        <div class="table-responsive">
+
+          <table class="table align-middle">
+
+            <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Goal Title</th>
+                <th>Month</th>
+                <th>Status</th>
+                <th>Last Updated</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>1</td>
+                <td>Improve API Performance</td>
+                <td>May 2025</td>
+                <td>
+                  <span class="badge bg-warning text-dark px-3 py-2">
+                    SUBMITTED
+                  </span>
+                </td>
+                <td>20 May 2025</td>
+                <td>
+                  <i class="fas fa-eye text-primary"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Employee Onboard</td>
+                <td>May 2025</td>
+                <td>
+                  <span class="badge bg-info text-dark px-3 py-2">
+                    TL REVIEWED
+                  </span>
+                </td>
+                <td>18 May 2025</td>
+                <td>
+                  <i class="fas fa-eye text-primary"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Timesheet Module</td>
+                <td>Apr 2025</td>
+                <td>
+                  <span class="badge bg-success px-3 py-2">
+                    ADMIN APPROVED
+                  </span>
+                </td>
+                <td>15 Apr 2025</td>
+                <td>
+                  <i class="fas fa-eye text-primary"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Bug Tracking System</td>
+                <td>Mar 2025</td>
+                <td>
+                  <span class="badge bg-secondary px-3 py-2">
+                    LOCKED
+                  </span>
+                </td>
+                <td>25 Mar 2025</td>
+                <td>
+                  <i class="fas fa-eye text-primary"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Reports Module</td>
+                <td>May 2025</td>
+                <td>
+                  <span class="badge bg-light text-dark border px-3 py-2">
+                    DRAFT
+                  </span>
+                </td>
+                <td>21 May 2025</td>
+                <td>
+                  <i class="fas fa-eye text-primary"></i>
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="d-flex justify-content-end mt-3">
+
+          <nav>
+            <ul class="pagination mb-0">
+
+              <li class="page-item">
+                <a class="page-link" href="#">&laquo;</a>
+              </li>
+
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+
+              <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+              </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

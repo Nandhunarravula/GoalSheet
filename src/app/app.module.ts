@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SummaryComponent } from './summary/summary.component';
+import { CreateGoalsComponent } from './create-goals/create-goals.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    SummaryComponent
+    SummaryComponent,
+    CreateGoalsComponent
   ],
   imports: [
     BrowserModule,
