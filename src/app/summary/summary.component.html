@@ -1,0 +1,30 @@
+<div class="summary-page">
+  <div class="summary-header">
+    <h1>Summary Page</h1>
+    <p>Parent Goal ID: {{ summaryData.parentGoal.parentGoalId }}</p>
+    <p>Team Code: {{ summaryData.parentGoal.teamCode }}</p>
+  </div>
+
+  <section class="child-goal card">
+    <h2>{{ summaryData.parentGoal.childGoal.childGoalTitle }}</h2>
+    <p class="goal-summary">{{ summaryData.parentGoal.childGoal.summary }}</p>
+    <div class="goal-meta">
+      <div><strong>Estimate:</strong> {{ summaryData.parentGoal.childGoal.estimateDate }}</div>
+      <div><strong>Status:</strong> <span class="status-tag">{{ summaryData.parentGoal.childGoal.approvedStatus }}</span></div>
+    </div>
+
+    <div class="goal-comments">
+      <h3>Comments</h3>
+      <div *ngFor="let comment of summaryData.parentGoal.childGoal.comments" class="comment-card">
+        <div class="comment-header">
+          <span class="comment-author">{{ comment.commentedBy }}</span>
+          <span class="comment-date">{{ comment.commentedDate | date: 'medium' }}</span>
+        </div>
+        <p>{{ comment.comment }}</p>
+        <div class="comment-actions">
+          <button type="button" class="review-button">Review Comment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
