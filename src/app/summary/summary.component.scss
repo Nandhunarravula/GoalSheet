@@ -1,0 +1,189 @@
+.summary-page {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+  color: #1f2937;
+}
+
+.summary-header {
+  margin-bottom: 24px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  border-radius: 16px;
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.12);
+}
+
+.summary-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.summary-header p {
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.goal-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+  align-items: center;
+}
+
+.goal-sheet-settings {
+  margin-bottom: 24px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 16px 24px;
+  margin-bottom: 16px;
+}
+
+.status-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.status-pill {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.status-tag.pending {
+  background: #ffe8d6;
+  color: #b45309;
+}
+
+.status-tag.approved {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.status-tag.denied {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-tag.in-progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-pill.pending {
+  background: #ffedd5;
+  color: #b45309;
+}
+
+.status-pill.approved {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.status-pill.denied {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-pill.in-progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.goal-comments {
+  margin-top: 26px;
+}
+
+.comment-card {
+  padding: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  background: #f8fafc;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.comment-author {
+  font-weight: 700;
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.review-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.review-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.no-comments {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #334155;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.comment-type {
+  display: inline-block;
+  margin-top: 0;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: #334155;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+}

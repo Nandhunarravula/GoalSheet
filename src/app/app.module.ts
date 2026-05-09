@@ -7,18 +7,27 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SummaryComponent } from './summary/summary.component';
+import { CreateGoalsComponent } from './create-goals/create-goals.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'summary', component: SummaryComponent },
+  { path: 'employees', component: EmployeeListComponent },
   { path: '**', redirectTo: '' }
+  
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SummaryComponent,
+    CreateGoalsComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
