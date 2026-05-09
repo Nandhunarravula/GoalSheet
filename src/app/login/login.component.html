@@ -1,0 +1,37 @@
+<div class="login-page">
+  <div class="login-card">
+    <div class="brand">
+      <div class="brand-logo">G</div>
+      <div class="brand-copy">
+        <p class="brand-subtitle">GOAL SHEET</p>
+        <h1>Sign In to Your Account</h1>
+      </div>
+    </div>
+
+    <form (ngSubmit)="login()" #loginForm="ngForm" class="login-form">
+      <label for="employeeId">Employee ID</label>
+      <input
+        id="employeeId"
+        name="employeeId"
+        type="text"
+        required
+        placeholder="Enter your employee ID"
+        [(ngModel)]="employeeId"
+      />
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        required
+        placeholder="Enter your password"
+        [(ngModel)]="password"
+      />
+
+      <button type="submit" [disabled]="!loginForm.form.valid">Login</button>
+
+      <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+    </form>
+  </div>
+</div>
