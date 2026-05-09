@@ -5,6 +5,8 @@ import { CreateGoalsComponent } from './create-goals/create-goals.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { SummaryComponent } from './summary/summary.component';
+import { empty } from 'rxjs';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 const routes: Routes = [
   {
@@ -33,6 +35,14 @@ const routes: Routes = [
     data: {
       navLabel: 'Create Goals',
       icon: 'goal'
+    }
+  },
+  {
+    path: 'employees',
+    component: EmployeeListComponent,
+    data: {
+      navLabel: 'Employees',
+      icon: 'people'
     }
   },
   {

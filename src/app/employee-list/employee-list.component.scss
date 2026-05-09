@@ -1,32 +1,79 @@
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   padding: 20px;
-  border-radius: 12px;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #4f46e5, #9333ea);
-  color: white;
-  position: relative; /* needed for plus button */
+  background: linear-gradient(to bottom right, #e0e7ff, #f0f4ff);
+  min-height: 90vh;
+  position: relative;
 }
 
 h2 {
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: separate;   /* allow spacing */
-  border-spacing: 0 15px;      /* vertical gap between rows */
-  margin-top: 20px;
-}
-
-th {
-  background-color: #b9b6e9;
-  color: white;
-  padding: 12px;
+  color: #1e3a8a;
+  margin-bottom: 30px;
   text-align: left;
+  font-weight: 600;
+}
+
+.employee-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: white;
+  height: 100%;
+  overflow: hidden;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.employee-details p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.employee-details strong {
+  color: #374151;
+  font-weight: 600;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 td {

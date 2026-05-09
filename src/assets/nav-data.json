@@ -13,5 +13,10 @@
     "label": "Summary",
     "path": "/summary",
     "icon": "fas fa-chart-bar"
+  },
+  {
+    "label": "Employees",
+    "path": "/employees",
+    "icon": "fas fa-users"
   }
 ]
