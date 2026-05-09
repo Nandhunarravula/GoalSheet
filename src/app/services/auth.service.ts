@@ -7,20 +7,16 @@ export interface UserData {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  private currentUser: UserData | null = null;
+  private user: UserData | null = null;
 
   setUser(user: UserData): void {
-    this.currentUser = user;
+    this.user = user;
   }
 
   getUser(): UserData | null {
-    return this.currentUser;
-  }
-
-  logout(): void {
-    this.currentUser = null;
+    return this.user;
   }
 }

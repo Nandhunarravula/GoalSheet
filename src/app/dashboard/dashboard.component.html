@@ -1,7 +1,49 @@
-<div class="dashboard-page">
-  <div class="dashboard-card">
-    <h1>Welcome {{ user?.role }}</h1>
-    <p>You have successfully logged in as {{ user?.role }}.</p>
-    <p class="employee-id">Employee ID: {{ user?.employeeId }}</p>
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <div class="header-content">
+      <div>
+        <h1>Welcome back, {{ user?.role }}! 👋</h1>
+        <p>Here’s what’s happening with your team today.</p>
+      </div>
+      <div class="header-actions">
+        <input type="text" placeholder="Search anything..." class="search-bar" />
+        <div class="date-picker">
+          <span>May 18 - May 24, 2025</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="dashboard-stats">
+    <div class="stat-card" *ngFor="let stat of stats">
+      <div class="stat-icon">
+        <i class="icon-placeholder"></i>
+      </div>
+      <div class="stat-info">
+        <h2>{{ stat.title }}</h2>
+        <p>{{ stat.value }}</p>
+        <span class="stat-change" [ngClass]="{'positive': stat.change > 0, 'negative': stat.change < 0}">
+          {{ stat.change > 0 ? '+' : '' }}{{ stat.change }}% vs last week
+        </span>
+      </div>
+    </div>
   </div>
+
+  <section class="team-leads">
+    <h2>Team Leads</h2>
+    <div class="team-leads-container">
+      <div class="team-lead-card" *ngFor="let lead of teamLeads" (click)="navigateToLead(lead)">
+        <div class="lead-header" [ngStyle]="{'background-color': lead.color}">
+          <h3>{{ lead.name }}</h3>
+          <p>{{ lead.role }}</p>
+        </div>
+        <div class="lead-stats">
+          <p>Projects: {{ lead.projects }}</p>
+          <p>Team Size: {{ lead.teamSize }}</p>
+          <p>Tasks Done: {{ lead.tasksDone }}%</p>
+        </div>
+      </div>
+    </div>
+    <button class="view-all-leads">View all leads</button>
+  </section>
 </div>
